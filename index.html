@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Pokemon Game with fetch</title>
@@ -7,9 +8,19 @@
     <div id="header">
       <h1>Pokemon Game</h1>
     </div>
+
+    <!-- ✅ Added Welcome Message -->
+    <div id="welcomeBox">Welcome! Click FIGHT to start the battle.</div>
+
     <div style="display: block">
       <button id="fight">Fight</button>
+      <!-- ✅ Replay Button (hidden initially) -->
+      <button id="replay" style="display:none;">Replay</button>
     </div>
+
+    <!-- ✅ Victory message area -->
+    <div id="victoryMessage"></div>
+
     <div id="container">
       <!-- player1 -->
       <div id="player1">
@@ -21,29 +32,25 @@
           <div id="img"></div>
           <span id="name"></span>
           <span id="experience"></span>
-          <ul id="abilities">
-            Abilities
-          </ul>
+          <ul id="abilities">Abilities</ul>
         </div>
       </div>
+
       <div id="player2">
         <div id="card_header">
           <span id="p2_name"></span>
           <span id="p2_score"></span>
         </div>
-        <!-- player2 -->
+
         <div id="card2">
           <div id="img"></div>
           <span id="name"></span>
           <span id="experience"></span>
-
-          <ul id="abilities">
-            Abilities
-          </ul>
+          <ul id="abilities">Abilities</ul>
         </div>
       </div>
     </div>
-    <script src="scripts.js"> </script>
+
+    <script src="scripts.js"></script>
   </body>
 </html>
-

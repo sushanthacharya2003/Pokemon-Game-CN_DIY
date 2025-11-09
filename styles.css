@@ -100,4 +100,36 @@ body {
       border: none;
       cursor: pointer;
   }
+  /* your existing CSS stays untouched */
+
+  #welcomeBox {
+    text-align: center;
+    background: #ffd86b;
+    padding: 10px;
+    margin: 20px auto;
+    width: 300px;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 18px;
+  }
+
+  #victoryMessage {
+    text-align: center;
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  #replay {
+    margin-left: 40rem;
+    width: 80px;
+    height: 40px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
 
