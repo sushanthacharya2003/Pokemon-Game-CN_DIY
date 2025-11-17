@@ -1,4 +1,4 @@
-
+live preview - https://f593jv.csb.app/
 DEMO VIDEO - https://shorturl.at/6ZYSO
 ## 🐉 Pokémon Battle Game (Promise-based)
 
@@ -6,6 +6,9 @@ A simple Pokémon battle game implemented using **vanilla JavaScript**, **fetch(
 Each battle randomly selects two Pokémon from the PokéAPI and compares their experience points to determine the winner.
 
 ---
+screenshot -
+<img width="310" height="389" alt="image" src="https://github.com/user-attachments/assets/8cbb1597-8409-4e5b-8cae-ab01cd590fee" />
+
 
 ## 🚀 Features
 
