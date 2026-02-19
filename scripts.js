@@ -25,19 +25,34 @@ const p2Exp = document.querySelector("#player2 #experience");
 const p2Abilities = document.querySelector("#player2 #abilities");
 
 // ✅ Fetch list of Pokémon (first 200)
-function getPokemonList() {
-  return fetch("https://pokeapi.co/api/v2/pokemon?limit=200")
-    .then(res => {
-      if (!res.ok) throw new Error("Failed to load Pokémon list");
-      return res.json();
-    })
-    .then(data => data.results);
+// function getPokemonList() {
+//   return fetch("https://pokeapi.co/api/v2/pokemon?limit=200")
+//     .then(res => {
+//       if (!res.ok) throw new Error("Failed to load Pokémon list");
+//       return res.json();
+//     })
+//     .then(data => data.results);
+// }
+
+// fetching using async and await
+
+async function getPokemonList() {
+  const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=200");
+  const data = await response.json();
+  return data.results;  // this is the actual list of pokemon
 }
 
+
+// function getRandomPokemon(list) {
+//   const randomIndex = Math.floor(Math.random() * list.length);
+//   return fetch(list[randomIndex].url).then(res => res.json());
+// }
+
 // ✅ Fetch one random Pokémon from list
-function getRandomPokemon(list) {
+async function getRandomPokemon(list) {
   const randomIndex = Math.floor(Math.random() * list.length);
-  return fetch(list[randomIndex].url).then(res => res.json());
+  const response= await fetch(list[randomIndex].url);
+  return response.json();
 }
 
 // ✅ Display Pokémon card
@@ -52,6 +67,9 @@ function displayPokemon(player, poke) {
     li.textContent = ab.ability.name;
     player.abilities.appendChild(li);
   });
+
+
+
 }
 
 // ✅ Check winner after 10 fights
